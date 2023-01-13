@@ -19,3 +19,4 @@ require('user.mappings')
 require('scripts.reload')
 
 require('user.coc_config')
+
