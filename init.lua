@@ -2,7 +2,7 @@
 -- Language options --
 ----------------------
 
-vim.api.nvim_exec('language en_US', true)
+vim.api.nvim_exec('language en_US.utf8', true)
 
 ----------------------------------
 -- Required plugins and configs --
