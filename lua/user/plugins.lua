@@ -71,12 +71,36 @@ require('packer').startup({function(use)
             requires = {
                 'nvim-lua/plenary.nvim',
                 'nvim-treesitter/nvim-treesitter',
-                'nvim-tree/nvim-web-devicons'
+                'nvim-tree/nvim-web-devicons',
                 -- 'sharkdp/fd', -- External dep required for live-grep 
                 -- 'BurntSushi/ripgrep', -- External dep required for live-grep
+            },
+            wants = {
+                'kkharji/sqlite.lua'
             }
         }
         use 'yamatsum/nvim-cursorline'
+        use {
+            'kkharji/sqlite.lua',
+            cmd = {
+                function()
+                    if vim.fn.has('win32') then
+                        vim.g.sqlite_clib_path = "C:/Users/ac00a35l/Documents/Gratuiciels/sqlite/path/to/sqlite3.dll"
+                    elseif vim.fn.has('macunix') then
+                        vim.g.sqlite_clib_path = ""
+                    end
+                end,
+            },
+        }
+        use {
+            'nvim-telescope/telescope-frecency.nvim',
+            config = function()
+                require('telescope').load_extension('frecency')
+            end,
+            requires = {
+              'kkharji/sqlite.lua'
+            }
+        }
 
         -- Vim autoclose plugin
         use 'windwp/nvim-autopairs'
