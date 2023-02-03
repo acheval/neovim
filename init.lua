@@ -12,8 +12,6 @@ vim.api.nvim_exec('language en_US.utf8', true)
 
 require('scripts.reload')
 
-require('scripts.nvim_tree_open')
-
 -- user plugins 
 
 require('user.plugins')
