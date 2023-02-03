@@ -1,0 +1,14 @@
+# Ignore swap
+swap
+
+# Ignore undo
+undo
+
+# Ignore backup
+backup
+
+# Ignore plugin
+plugin
+
+# Ignore coc-settings.json
+coc-settings.json
