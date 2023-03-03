@@ -334,8 +334,6 @@ require('nvim-tree').setup({
         enable = true,
         auto_open = true
     },
-    open_on_setup = true,
-    open_on_setup_file = true,
     reload_on_bufenter = true,
     renderer = {
         group_empty = true,
@@ -367,6 +365,7 @@ require('nvim-tree').setup({
         width = 30
     }
 })
+require("nvim-tree.api").tree.toggle({ focus = false })
 
 require('which-key').setup({
     plugins = {
