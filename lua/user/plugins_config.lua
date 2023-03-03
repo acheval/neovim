@@ -365,7 +365,10 @@ require('nvim-tree').setup({
         width = 30
     }
 })
-require("nvim-tree.api").tree.toggle({ focus = false })
+require("nvim-tree.api").tree.open({ 
+    focus = false, 
+    find_file = true
+})
 
 require('which-key').setup({
     plugins = {
