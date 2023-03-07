@@ -318,7 +318,7 @@ require('nvim-tree').setup({
         enable = true
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
         custom = {
             "*.lnk"
         }
@@ -443,6 +443,7 @@ require('which-key').setup({
     },
 })
 
+local colors = require("tokyonight.colors").setup()
 require('scrollbar').setup({
     show = true,
     show_in_active_only = false,
@@ -453,7 +454,7 @@ require('scrollbar').setup({
     throttle_ms = 100,
     handle = {
         text = " ",
-        color = nil,
+        color = colors.bg_highlight,
         cterm = nil,
         highlight = "CursorColumn",
         hide_if_all_visible = true, -- Hides handle if all lines are visible
@@ -462,70 +463,70 @@ require('scrollbar').setup({
         Cursor = {
             text = "•",
             priority = 0,
-            color = nil,
+            color = colors.white,
             cterm = nil,
             highlight = "Normal",
         },
         Search = {
             text = { "-", "=" },
             priority = 1,
-            color = nil,
+            color = colors.orange,
             cterm = nil,
             highlight = "Search",
         },
         Error = {
             text = { "-", "=" },
             priority = 2,
-            color = nil,
+            color = colors.error,
             cterm = nil,
             highlight = "DiagnosticVirtualTextError",
         },
         Warn = {
             text = { "-", "=" },
             priority = 3,
-            color = nil,
+            color = colors.warning,
             cterm = nil,
             highlight = "DiagnosticVirtualTextWarn",
         },
         Info = {
             text = { "-", "=" },
             priority = 4,
-            color = nil,
+            color = colors.info,
             cterm = nil,
             highlight = "DiagnosticVirtualTextInfo",
         },
         Hint = {
             text = { "-", "=" },
             priority = 5,
-            color = nil,
+            color = colors.hint,
             cterm = nil,
             highlight = "DiagnosticVirtualTextHint",
         },
         Misc = {
             text = { "-", "=" },
             priority = 6,
-            color = nil,
+            color = colors.purple,
             cterm = nil,
             highlight = "Normal",
         },
         GitAdd = {
             text = "┆",
             priority = 7,
-            color = nil,
+            color = colors.green,
             cterm = nil,
             highlight = "GitSignsAdd",
         },
         GitChange = {
             text = "┆",
             priority = 7,
-            color = nil,
+            color = colors.yellow,
             cterm = nil,
             highlight = "GitSignsChange",
         },
         GitDelete = {
             text = "▁",
             priority = 7,
-            color = nil,
+            color = colors.red,
             cterm = nil,
             highlight = "GitSignsDelete",
         },
