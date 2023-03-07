@@ -41,7 +41,9 @@ set.expandtab = true
 set.shiftround = true
 cmd(
   [[
+    augroup specialTabs
     autocmd FileType lua setlocal shiftwidth=4 ts=4 sts=4
+    augroup END
   ]]
 )
 
@@ -105,6 +107,15 @@ set.showfulltag = true
 set.showcmd = true
 set.shortmess:append('c')
 
+--  filetypes
+cmd(
+  [[
+    augroup specialFiletypes
+    autocmd! BufRead,BufNewFile *.yml        set filetype=yaml.ansible
+    autocmd! BufRead,BufNewFile *.txt,*.md   set filetype=pandoc
+    autocmd! BufRead,BufNewFile *.j2         call jinja#AdjustFiletype() 
+    augroup END
+  ]])
 
 -- enable numbers
 set.number = true
@@ -114,19 +125,20 @@ set.relativenumber = true
 set.foldenable = true
 set.foldlevel = 0
 set.foldlevelstart = 10
--- cmd(
---   [[
---     augroup specialFolds
---     autocmd FileType help      setlocal foldmethod=marker nonumber nolist
---     autocmd FileType vim-plug  setlocal foldmethod=manual nonumber
---     autocmd FileType lua       setlocal foldmethod=syntax
---     autocmd FileType git       setlocal foldmethod=syntax
---     autocmd FileType diff      setlocal foldmethod=syntax
---     autocmd FileType markdown  setlocal foldmethod=syntax wrap linebreak
---     autocmd FileType pandoc    setlocal foldmethod=syntax wrap linebreak
---     augroup END
---   ]]
--- )
+cmd(
+  [[
+    augroup specialFolds
+    autocmd FileType help            setlocal foldmethod=marker nonumber nolist
+    autocmd FileType vim-plug        setlocal foldmethod=manual nonumber
+    autocmd FileType lua             setlocal foldmethod=syntax
+    autocmd FileType git             setlocal foldmethod=syntax
+    autocmd FileType diff            setlocal foldmethod=syntax
+    autocmd FileType markdown        setlocal foldmethod=syntax wrap linebreak
+    autocmd FileType pandoc          setlocal foldmethod=syntax wrap linebreak
+    autocmd FileType yaml.ansible    setlocal foldmethod=indent wrap linebreak
+    augroup END
+  ]]
+)
 
 -- show matching parenthesis
 set.showmatch = true
@@ -136,9 +148,3 @@ g.loaded_matchparen = true
 set.list = true
 set.listchars = {eol = '↲', tab = '▸ ', trail = '·', space = '⋅'}
 
--- jinja.vim config
-cmd(
-    [[
-        autocmd! BufRead,BufNewFile *.j2  call jinja#AdjustFiletype()
-    ]]
-)
