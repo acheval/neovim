@@ -32,6 +32,9 @@ set.signcolumn = "yes"
 -- disable pandoc conceal syntax
 g['pandoc#syntax#conceal#use'] = false 
 
+-- enable xml syntax folding
+g['xml_syntax_folding'] = true
+
 -- tabulations
 set.smarttab = true
 set.shiftwidth = 2
