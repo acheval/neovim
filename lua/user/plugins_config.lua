@@ -365,7 +365,7 @@ require('nvim-tree').setup({
         width = 30
     }
 })
-require("nvim-tree.api").tree.open({ 
+require("nvim-tree.api").tree.toggle({ 
     focus = false, 
     find_file = true
 })
