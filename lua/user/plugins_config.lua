@@ -330,14 +330,17 @@ require('nvim-tree').setup({
         show_on_open_dirs = true,
         timeout = 400
     },
+    hijack_cursor = true,
     hijack_directories = {
         enable = true,
         auto_open = true
     },
+    prefer_startup_root = true,
     reload_on_bufenter = true,
     renderer = {
         group_empty = true,
-        highlight_opened_files = "icon"
+        highlight_git = "all",
+        highlight_opened_files = "icon",
     },
     respect_buf_cwd = false,
     root_dirs = { ".git", "*deploiement*" },
@@ -350,16 +353,11 @@ require('nvim-tree').setup({
     },
     update_focused_file = {
         enable = true,
-        update_root = false
+        update_root = true
     },
     view = {
         adaptive_size = false,
         centralize_selection = false,
-        mappings = {
-            list = {
-                { key = "u", action = "dir_up" },
-            },
-        },
         number = true,
         relativenumber = true,
         width = 30
@@ -609,11 +607,12 @@ require('gitsigns').setup({
     },
 })
 
-require('indent_blankline').setup({
-    show_end_of_line = true,
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
+require('ibl').setup({
+    scope = {
+        enabled = true,
+        show_start = true,
+        show_end = true,
+    },
 })
 
 require('tokyonight').setup({
