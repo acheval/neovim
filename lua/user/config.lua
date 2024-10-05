@@ -120,6 +120,11 @@ cmd(
     augroup END
   ]])
 
+-- coc filetype mapping
+g['coc_filetype_map'] = { 
+  ['yaml.ansible'] = 'ansible',
+}
+
 -- enable numbers
 set.number = true
 set.relativenumber = true
@@ -149,5 +154,10 @@ g.loaded_matchparen = true
 
 -- indent-blankline config
 set.list = true
-set.listchars = {eol = '↲', tab = '▸ ', trail = '·', space = '⋅'}
+set.listchars = {
+  eol = '↲',
+  tab = '▸ ',
+  trail = '·',
+  space = '⋅'
+}
 
