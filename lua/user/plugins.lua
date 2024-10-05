@@ -34,6 +34,13 @@ require('packer').startup({function(use)
         -- use 'Glench/Vim-Jinja2-Syntax'
         use 'HiPhish/jinja.vim'
 
+        -- Mini.nvim
+        use 'echasnovski/mini.nvim'
+        use 'echasnovski/mini.icons'
+
+        -- Ansible plugins
+        use 'pearofducks/ansible-vim'
+
     -- Lua plugins
 
         -- Nvim Tree plugins
@@ -80,18 +87,7 @@ require('packer').startup({function(use)
             }
         }
         use 'yamatsum/nvim-cursorline'
-        use {
-            'kkharji/sqlite.lua',
-            cmd = {
-                function()
-                    if vim.fn.has('win32') then
-                        vim.g.sqlite_clib_path = "C:/Users/ac00a35l/Documents/Gratuiciels/sqlite/path/to/sqlite3.dll"
-                    elseif vim.fn.has('macunix') then
-                        vim.g.sqlite_clib_path = ""
-                    end
-                end,
-            },
-        }
+        use 'kkharji/sqlite.lua'
         use {
             'nvim-telescope/telescope-frecency.nvim',
             config = function()

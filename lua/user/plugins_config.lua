@@ -246,7 +246,7 @@ require('lualine').setup({
 require('nvim-web-devicons').setup()
 
 require('nvim-treesitter.configs').setup({
-    ensure_installed = { "lua", "yaml", "markdown", "html", "json", "bash", "vim" },
+    ensure_installed = { "lua", "yaml", "markdown", "html", "json", "bash", "vim", "vimdoc", "query" },
     sync_install = false,
   --   ignore_install = {},
     highlight = {
