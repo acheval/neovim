@@ -22,6 +22,7 @@ require('packer').startup({function(use)
         use 'tpope/vim-fugitive'
         use 'tpope/vim-commentary'
         use 'tpope/vim-repeat'
+        use 'tpope/vim-abolish'
 
         -- Tabular plugin
         use 'godlygeek/tabular'
@@ -37,9 +38,6 @@ require('packer').startup({function(use)
         -- Mini.nvim
         use 'echasnovski/mini.nvim'
         use 'echasnovski/mini.icons'
-
-        -- Ansible plugins
-        use 'pearofducks/ansible-vim'
 
     -- Lua plugins
 
