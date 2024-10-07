@@ -50,7 +50,11 @@ require('packer').startup({function(use)
         }
 
         -- CoC Autocomplete
-        use 'neoclide/coc.nvim'
+        use {
+          'neoclide/coc.nvim',
+          branch = 'release',
+          run = ':CocInstall coc-json @yaegassy/coc-ansible'
+        }
 
         -- Tree Sitter
         use {
