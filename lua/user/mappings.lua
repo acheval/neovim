@@ -55,7 +55,7 @@ map('n', '<Leader>nt', '<cmd>NvimTreeToggle<CR>')
 -- Find files using Telescope command-line sugar.
 map('n', '<Leader>ff', '<cmd>Telescope find_files<cr>')
 map('n', '<Leader>lg', '<cmd>Telescope live_grep<cr>')
-map('n', '<Leader>sg', '<cmd>Telescope grep_string<cr>')
+map('n', '<Leader>gs', '<cmd>Telescope grep_string<cr>')
 map('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
 map('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>')
 map('n', '<Leader>tr', '<cmd>Telescope resume<cr>')
@@ -70,7 +70,7 @@ map('n', '<Leader>gp', '<cmd>Git push<cr>')
 map('n', '<Leader>gbt', '<cmd>Gitsigns toggle_current_line_blame<cr>')
 map('n', '<Leader>gr', '<cmd>Git reset %<cr>')
 map('n', '<Leader>gR', '<cmd>Git reset .<cr>')
-map('n', '<Leader>gs', '<cmd>Git status<cr>')
+map('n', '<Leader>gS', '<cmd>Git status<cr>')
 
 ---------------------
 -- Packer Mappings --
