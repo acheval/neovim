@@ -53,30 +53,30 @@ map('n', '<Leader>nt', '<cmd>NvimTreeToggle<CR>')
 ------------------------
 
 -- Find files using Telescope command-line sugar.
-map('n', '<Leader>ff', '<cmd>Telescope find_files<cr>')
-map('n', '<Leader>lg', '<cmd>Telescope live_grep<cr>')
-map('n', '<Leader>gs', '<cmd>Telescope grep_string<cr>')
-map('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
-map('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>')
-map('n', '<Leader>tr', '<cmd>Telescope resume<cr>')
+map('n', '<Leader>tff', '<cmd>Telescope find_files<cr>')
+map('n', '<Leader>tlg', '<cmd>Telescope live_grep<cr>')
+map('n', '<Leader>tgs', '<cmd>Telescope grep_string<cr>')
+map('n', '<Leader>tfb', '<cmd>Telescope buffers<cr>')
+map('n', '<Leader>tfh', '<cmd>Telescope help_tags<cr>')
+map('n', '<Leader>tre', '<cmd>Telescope resume<cr>')
 
 ------------------
 -- Git Mappings --
 ------------------
-map('n', '<Leader>ga', '<cmd>Git add %<cr>')
-map('n', '<Leader>gA', '<cmd>Git add .<cr>')
+map('n', '<Leader>gac', '<cmd>Git add %<cr>') -- Git stage current file
+map('n', '<Leader>gaa', '<cmd>Git add .<cr>') -- Git unstage current file
 map('n', '<Leader>gc', '<cmd>Git commit<cr>')
-map('n', '<Leader>gp', '<cmd>Git push<cr>')
-map('n', '<Leader>gP', '<cmd>Git pull<cr>')
+map('n', '<Leader>gps', '<cmd>Git push<cr>')
+map('n', '<Leader>gpl', '<cmd>Git pull<cr>')
 map('n', '<Leader>gbt', '<cmd>Gitsigns toggle_current_line_blame<cr>')
-map('n', '<Leader>gr', '<cmd>Git reset %<cr>')
-map('n', '<Leader>gR', '<cmd>Git reset .<cr>')
+map('n', '<Leader>grc', '<cmd>Git reset %<cr>') -- Git unstage current file
+map('n', '<Leader>gra', '<cmd>Git reset .<cr>') -- Git unstage all files
 map('n', '<Leader>gS', '<cmd>Git status<cr>')
+map('n', '<Leader>glg', '<cmd>:LazyGit<cr>')
 
 ---------------------
 -- Packer Mappings --
 ---------------------
 
--- toggle NvimTree
 map('n', '<Leader>pi', '<cmd>PackerInstall<CR>')
 map('n', '<Leader>ps', '<cmd>PackerSync<CR>')
