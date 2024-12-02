@@ -18,7 +18,11 @@ require('user.plugins')
 
 require('user.plugins_config')
 
-require('user.coc_config')
+-- coc configs
+
+require('user.coc.coc_config')
+
+require('user.coc.coc_extensions')
 
 -- user config
  
