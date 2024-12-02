@@ -796,7 +796,7 @@ require('telescope').setup{
                 -- map actions.which_key to <C-h> (default: <C-/>)
                 -- actions.which_key shows the mappings for your picker,
                 -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-                ["<C-h>"] = "which_key"
+                -- ["<C-h>"] = "which_key"
             }
         }
     },
@@ -814,6 +814,12 @@ require('telescope').setup{
         -- extension_name = {
         --     extension_config_key = value,
         -- }
+        coc = {
+            -- theme = 'ivy',
+            prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+            push_cursor_on_edit = true, -- save the cursor position to jump back in the future
+            timeout = 3000, -- timeout for coc commands
+        },
         workspaces = {
             -- keep insert mode after selection in the picker, default is false
             keep_insert = true,   -- please take a look at the readme of the extension you want to configure
