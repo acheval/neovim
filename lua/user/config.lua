@@ -153,10 +153,10 @@ g.loaded_matchparen = true
 
 -- indent-blankline config
 set.list = true
-set.listchars = {
-  eol = '↲',
-  tab = '▸ ',
-  trail = '·',
-  space = '⋅'
-}
+-- set.listchars = {
+--   eol = '↲',
+--   tab = '▸ ',
+--   trail = '·',
+--   space = '⋅'
+-- }
 
