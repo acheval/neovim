@@ -53,7 +53,12 @@ require('packer').startup({function(use)
         use {
           'neoclide/coc.nvim',
           branch = 'release',
-          run = ':CocInstall coc-json @yaegassy/coc-ansible'
+          run = ':CocInstall \
+                coc-lua \
+                coc-json \
+                @yaegassy/coc-ansible \
+                coc-htmldjango \
+                coc-groovy'
         }
 
         -- Tree Sitter
@@ -89,6 +94,7 @@ require('packer').startup({function(use)
                 'nvim-lua/plenary.nvim',
                 'nvim-treesitter/nvim-treesitter',
                 'nvim-tree/nvim-web-devicons',
+                'fannheyward/telescope-coc.nvim',
                 -- 'sharkdp/fd', -- External dep required for live-grep 
                 -- 'BurntSushi/ripgrep', -- External dep required for live-grep
             },
