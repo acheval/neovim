@@ -53,12 +53,7 @@ require('packer').startup({function(use)
         use {
           'neoclide/coc.nvim',
           branch = 'release',
-          run = ':CocInstall \
-                coc-lua \
-                coc-json \
-                @yaegassy/coc-ansible \
-                coc-htmldjango \
-                coc-groovy'
+          run = ''
         }
 
         -- Tree Sitter
