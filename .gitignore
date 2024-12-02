@@ -10,8 +10,5 @@ backup
 # Ignore plugin
 plugin
 
-# Ignore coc-settings.json
-coc-settings.json
-
 # git dir
 .git
