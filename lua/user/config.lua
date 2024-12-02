@@ -116,7 +116,6 @@ cmd(
     augroup specialFiletypes
     autocmd! BufRead,BufNewFile *.yml        set filetype=yaml.ansible
     autocmd! BufRead,BufNewFile *.txt,*.md   set filetype=pandoc
-    autocmd! BufRead,BufNewFile *.j2         call jinja#AdjustFiletype() 
     augroup END
   ]])
 
