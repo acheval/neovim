@@ -341,9 +341,13 @@ require('nvim-tree').setup({
         group_empty = true,
         highlight_git = "all",
         highlight_opened_files = "icon",
+        symlink_destination = false,
     },
     respect_buf_cwd = false,
-    root_dirs = { ".git", "*deploiement*" },
+    root_dirs = { 
+      ".git", 
+      "*deploiement*" 
+    },
     sort_by = "name",
     sync_root_with_cwd = true,
     tab = {
@@ -356,11 +360,11 @@ require('nvim-tree').setup({
         update_root = true
     },
     view = {
-        adaptive_size = false,
+        adaptive_size = true,
         centralize_selection = false,
-        number = true,
-        relativenumber = true,
-        width = 30
+        number = false,
+        relativenumber = false,
+        -- width = 30
     }
 })
 require("nvim-tree.api").tree.toggle({ 
