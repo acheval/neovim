@@ -756,6 +756,7 @@ require('workspaces').setup({
         open_pre = {},
         open = {
             'NvimTreeOpen',
+            'Telescope find_files'
         },
     },
 })
