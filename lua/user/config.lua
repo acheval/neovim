@@ -55,7 +55,7 @@ set.smartindent =  true
 set.autoindent = true
 
 -- text width
-set.textwidth = 80
+-- set.textwidth = 80
 set.colorcolumn = "+0"
 cmd("highlight colorcolumn ctermbg=red guibg=red")
 set.wrap = false
