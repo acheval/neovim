@@ -54,6 +54,7 @@ map('n', '<Leader>nt', '<cmd>NvimTreeToggle<CR>')
 
 -- Find
 map('n', '<Leader>tff', '<cmd>Telescope find_files<cr>')
+map('v', '<Leader>tff', '<cmd>Telescope find_files<cr>')
 map('n', '<Leader>tfr', '<cmd>Telescope frecency workspace=CWD<cr>')
 map('n', '<Leader>tlg', '<cmd>Telescope live_grep<cr>')
 map('v', '<Leader>tlg', '<cmd>Telescope live_grep<cr>')
