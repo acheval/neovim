@@ -14,7 +14,6 @@ local b = vim.bo -- buffer-scoped options
 local w = vim.wo -- windows-scoped options
 
 -- colors
-cmd("colorscheme tokyonight")
 set.termguicolors = true
 
 set.lazyredraw = true
