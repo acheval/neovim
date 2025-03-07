@@ -1,5 +1,5 @@
 -- Import & assign the map() function from the utils module
-local map = require('scripts.remap').map
+local map = require('functions.remap').map
 
 ---------------------
 -- Neovim mappings --
