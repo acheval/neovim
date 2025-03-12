@@ -8,6 +8,7 @@
 local exec = vim.api.nvim_exec -- execute Vimscript
 local set = vim.opt -- global options
 local cmd = vim.cmd -- execute Vim commands
+local api = vim.api -- api calls
 local fn = vim.fn -- call Vim functions
 local g = vim.g -- global variables
 local b = vim.bo -- buffer-scoped options
