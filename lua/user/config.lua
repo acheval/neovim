@@ -38,13 +38,18 @@ set.tabstop = 2
 set.softtabstop = 2
 set.expandtab = true
 set.shiftround = true
-cmd(
-  [[
-    augroup specialTabs
-    autocmd FileType lua setlocal shiftwidth=4 ts=4 sts=4
-    augroup END
-  ]]
-)
+api.nvim_create_augroup("specialTabs", {})
+api.nvim_create_autocmd({
+  "FileType"
+}, {
+    group = "specialTabs",
+    pattern = {
+      "lua",
+      "*.lua"
+    },
+    command = "setlocal shiftwidth=4 ts=4 sts=4",
+    desc = "set tabstop for lua"
+})
 
 -- indentation
 set.smartindent =  true
@@ -101,13 +106,19 @@ set.showcmd = true
 set.shortmess:append('c')
 
 --  filetypes
-cmd(
-  [[
-    augroup specialFiletypes
-    autocmd! BufRead,BufNewFile *.yml        set filetype=yaml.ansible
-    augroup END
-  ]])
-
+api.nvim_create_augroup("specialFiletypes", {})
+api.nvim_create_autocmd({
+  "BufRead",
+  "BufNewFile"
+}, {
+    group = "specialFiletypes",
+    pattern = {
+      "*.yml",
+      "*.yaml"
+    },
+    command = "set filetype=yaml.ansible",
+    desc = "set filetype for ansible files"
+})
 
 -- enable numbers
 set.number = true
@@ -117,19 +128,31 @@ set.relativenumber = true
 set.foldenable = true
 set.foldlevel = 0
 set.foldlevelstart = 10
-cmd(
-  [[
-    augroup specialFolds
-    autocmd FileType help            setlocal foldmethod=marker nonumber nolist
-    autocmd FileType vim-plug        setlocal foldmethod=manual nonumber
-    autocmd FileType lua             setlocal foldmethod=syntax
-    autocmd FileType git             setlocal foldmethod=syntax
-    autocmd FileType diff            setlocal foldmethod=syntax
-    autocmd FileType markdown        setlocal foldmethod=syntax wrap linebreak
-    autocmd FileType yaml.ansible    setlocal foldmethod=indent wrap linebreak
-    augroup END
-  ]]
-)
+api.nvim_create_augroup("specialFolds", {})
+api.nvim_create_autocmd({
+  "FileType"
+}, {
+    group = "specialFolds",
+    pattern = {
+      "git",
+      "lua",
+      "diff",
+      "markdown"
+    },
+    command = "setlocal foldmethod=syntax wrap linebreak",
+    desc = "set foldmethod syntax"
+})
+
+api.nvim_create_autocmd({
+  "FileType"
+}, {
+    group = "specialFolds",
+    pattern = {
+      "yaml.ansible"
+    },
+    command = "setlocal foldmethod=indent wrap linebreak",
+    desc = "set foldmethod indent"
+})
 
 -- show matching parenthesis
 set.showmatch = true
