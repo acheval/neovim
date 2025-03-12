@@ -10,14 +10,12 @@ vim.api.nvim_exec('language en_US.utf8', true)
 
 -- user config
  
-require('user.config')
-
-require('user.mappings')
+require('user')
 
 -- user scripts
 
-require('functions.reload')
+require('functions')
 
 -- base config
 
-require('config.lazy')
+require('config')
