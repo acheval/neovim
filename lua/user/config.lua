@@ -28,9 +28,6 @@ set.syntax = on
 -- sign column
 set.signcolumn = "yes"
 
--- disable pandoc conceal syntax
-g['pandoc#syntax#conceal#use'] = false 
-
 -- enable xml syntax folding
 g['xml_syntax_folding'] = true
 
@@ -65,14 +62,8 @@ set.cursorline = true
 set.cursorcolumn = true
 
 -- spell check
+api.nvim_create_augroup("spellSettings", {})
 set.spell = false
-cmd(
-  [[
-    augroup spellSettings
-    autocmd FileType pandoc setlocal nospell
-    augroup END
-  ]]
-)
 
 -- encoding
 set.encoding = "utf-8"
@@ -114,7 +105,6 @@ cmd(
   [[
     augroup specialFiletypes
     autocmd! BufRead,BufNewFile *.yml        set filetype=yaml.ansible
-    autocmd! BufRead,BufNewFile *.txt,*.md   set filetype=pandoc
     augroup END
   ]])
 
@@ -140,7 +130,6 @@ cmd(
     autocmd FileType git             setlocal foldmethod=syntax
     autocmd FileType diff            setlocal foldmethod=syntax
     autocmd FileType markdown        setlocal foldmethod=syntax wrap linebreak
-    autocmd FileType pandoc          setlocal foldmethod=syntax wrap linebreak
     autocmd FileType yaml.ansible    setlocal foldmethod=indent wrap linebreak
     augroup END
   ]]
