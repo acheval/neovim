@@ -16,6 +16,13 @@ return {
         }
     end,
     config = function()
+
+        -- coc filetype mapping
+        vim.g['coc_filetype_map'] = {
+          ['yaml.ansible'] = 'ansible',
+          ['json5'] = 'json'
+        }
+
         -- Some servers have issues with backup files, see #649
         vim.opt.backup = false
         vim.opt.writebackup = false

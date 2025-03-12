@@ -108,10 +108,6 @@ cmd(
     augroup END
   ]])
 
--- coc filetype mapping
-g['coc_filetype_map'] = { 
-  ['yaml.ansible'] = 'ansible',
-}
 
 -- enable numbers
 set.number = true
