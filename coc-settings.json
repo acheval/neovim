@@ -9,5 +9,6 @@
     }
   },
   "htmldjango.enable": true,
-  "htmldjango.djlint.profile": "jinja"
+  "htmldjango.djlint.profile": "jinja",
+  "suggest.noselect": false
 }

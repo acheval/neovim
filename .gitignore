@@ -12,3 +12,6 @@ plugin
 
 # git dir
 .git
+
+# lazy state
+lazy-lock.json
