@@ -20,7 +20,9 @@ return {
         -- coc filetype mapping
         vim.g['coc_filetype_map'] = {
           ['yaml.ansible'] = 'ansible',
-          ['json5'] = 'json'
+          ['json5'] = 'json',
+          ['tf'] = 'terraform',
+          ['tfstate'] = 'json',
         }
 
         -- Some servers have issues with backup files, see #649
