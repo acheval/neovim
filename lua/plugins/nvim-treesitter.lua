@@ -2,7 +2,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ":TSUpdate",
     lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
-    init = function(plugin)
+    init = function()
       require("nvim-treesitter.query_predicates")
     end,
     cmd = {
