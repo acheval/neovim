@@ -106,21 +106,6 @@ set.showfulltag = true
 set.showcmd = true
 set.shortmess:append('c')
 
---  filetypes
-api.nvim_create_augroup("specialFiletypes", {})
-api.nvim_create_autocmd({
-  "BufRead",
-  "BufNewFile"
-}, {
-    group = "specialFiletypes",
-    pattern = {
-      "*.yml",
-      "*.yaml"
-    },
-    command = "set filetype=yaml.ansible",
-    desc = "set filetype for ansible files"
-})
-
 -- enable numbers
 set.number = true
 set.relativenumber = true
@@ -129,31 +114,6 @@ set.relativenumber = true
 set.foldenable = true
 set.foldlevel = 0
 set.foldlevelstart = 10
-api.nvim_create_augroup("specialFolds", {})
-api.nvim_create_autocmd({
-  "FileType"
-}, {
-    group = "specialFolds",
-    pattern = {
-      "git",
-      "lua",
-      "diff",
-      "markdown"
-    },
-    command = "setlocal foldmethod=syntax wrap linebreak",
-    desc = "set foldmethod syntax"
-})
-
-api.nvim_create_autocmd({
-  "FileType"
-}, {
-    group = "specialFolds",
-    pattern = {
-      "yaml.ansible"
-    },
-    command = "setlocal foldmethod=indent wrap linebreak",
-    desc = "set foldmethod indent"
-})
 
 -- show matching parenthesis
 set.showmatch = true

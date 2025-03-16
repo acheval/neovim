@@ -9,6 +9,19 @@ api.nvim_create_autocmd({
 }, {
     group = "specialFiletypes",
     pattern = {
+      "*.yml",
+      "*.yaml"
+    },
+    command = "set filetype=yaml.ansible",
+    desc = "set filetype for ansible files"
+})
+
+api.nvim_create_autocmd({
+  "BufRead",
+  "BufNewFile"
+}, {
+    group = "specialFiletypes",
+    pattern = {
       "*.txt",
       "*.md"
     },
@@ -16,3 +29,27 @@ api.nvim_create_autocmd({
     desc = "set FileType as Pandoc"
 })
 
+api.nvim_create_autocmd({
+  "BufRead",
+  "BufNewFile"
+}, {
+    group = "specialFiletypes",
+    pattern = {
+      "*.tf",
+      "*.tfvars"
+    },
+    command = "set filetype=tf",
+    desc = "set FileType as terraform"
+})
+
+api.nvim_create_autocmd({
+  "BufRead",
+  "BufNewFile"
+}, {
+    group = "specialFiletypes",
+    pattern = {
+      "*.tfstate"
+    },
+    command = "set filetype=json",
+    desc = "set FileType as json"
+})
