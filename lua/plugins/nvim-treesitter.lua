@@ -10,6 +10,12 @@ return {
         "TSUpdate",
         "TSInstall"
     },
+    config = function ()
+        local opt = vim.opt
+
+        opt.foldmethod = "expr"
+        opt.foldexpr = "nvim_treesitter#foldexpr()"
+    end,
     opts = {
         ensure_installed = {
             "bash",
