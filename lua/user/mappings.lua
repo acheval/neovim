@@ -89,9 +89,10 @@ map('n', '<Leader>gR', '<cmd>Git reset .<cr>') -- Git unstage all files
 map('n', '<Leader>gs', '<cmd>Git status<cr>')
 map('n', '<Leader>glg', '<cmd>:LazyGit<cr>')
 
----------------------
--- Packer Mappings --
----------------------
+-------------------
+-- Lazy Mappings --
+-------------------
 
-map('n', '<Leader>pi', '<cmd>PackerInstall<CR>')
-map('n', '<Leader>ps', '<cmd>PackerSync<CR>')
+map('n', '<Leader>li', '<cmd>Lazy install<CR>')
+map('n', '<Leader>ls', '<cmd>Lazy sync<CR>')
+map('n', '<Leader>lu', '<cmd>Lazy update<CR>')
