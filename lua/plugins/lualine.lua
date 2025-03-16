@@ -4,11 +4,11 @@ return {
         options = {
             icons_enabled = true,
             theme = 'auto',
-            component_separators = { 
+            component_separators = {
               left = '',
               right = ''
             },
-            section_separators = { 
+            section_separators = {
               left = '',
               right = ''
             },
@@ -190,7 +190,7 @@ return {
             lualine_y = {},
             lualine_z = {}
         },
-        extensions = { 
+        extensions = {
             'nvim-tree',
             'fugitive',
             'fzf'
