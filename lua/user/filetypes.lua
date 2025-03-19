@@ -22,6 +22,19 @@ api.nvim_create_autocmd({
 }, {
     group = "specialFiletypes",
     pattern = {
+      "*.gitlab-ci*.{yml,yaml}",
+      "*.pre-commit-config*.{yml,yaml}"
+    },
+    command = "set filetype=yaml.gitlab",
+    desc = "set filetype for gitlab files"
+})
+
+api.nvim_create_autocmd({
+  "BufRead",
+  "BufNewFile"
+}, {
+    group = "specialFiletypes",
+    pattern = {
       "*.txt",
       "*.md"
     },
