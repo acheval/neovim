@@ -26,6 +26,8 @@ set.modelines = 5
 -- syntax
 set.syntax = on 
 
+set.exrc = on
+
 -- sign column
 set.signcolumn = "yes"
 
