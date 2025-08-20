@@ -8,7 +8,11 @@
       "settings": {}
     }
   },
-  "htmldjango.enable": true,
-  "htmldjango.djlint.profile": "jinja",
+  "htmldjango": {
+    "enable": true,
+    "djlint": {
+      "profile": "jinja"
+    }
+  },
   "suggest.noselect": false
 }
