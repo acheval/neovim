@@ -12,7 +12,8 @@ return {
             'coc-htmldjango',
             'coc-groovy',
             'coc-sh',
-            'coc-sql'
+            'coc-sql',
+            'coc-toml'
         }
     end,
     config = function()
