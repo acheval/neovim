@@ -29,6 +29,19 @@ api.nvim_create_autocmd({
     desc = "set filetype for gitlab files"
 })
 
+-- api.nvim_create_autocmd({
+--   "BufRead",
+--   "BufNewFile"
+-- }, {
+--     group = "specialFiletypes",
+--     pattern = {
+--       "*.txt",
+--       "*.md"
+--     },
+--     command = "set filetype=pandoc",
+--     desc = "set FileType as Pandoc"
+-- })
+
 api.nvim_create_autocmd({
   "BufRead",
   "BufNewFile"
