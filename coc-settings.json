@@ -8,11 +8,9 @@
       "settings": {}
     }
   },
-  "htmldjango": {
-    "enable": true,
-    "djlint": {
-      "profile": "jinja"
-    }
-  },
-  "suggest.noselect": false
+  "htmldjango.enable": true,
+  "htmldjango.djlint.profile": "jinja",
+  "suggest.noselect": false,
+  "ansible.enable": true,
+  "ansible.validation.lint.arguments": "--offline -R --rules-dir ~/repos/gitlab/ici-devops/da/tools/jls/unitep-jls-lint"
 }
