@@ -13,7 +13,7 @@ return {
             open_pre = {},
             open = {
                 'NvimTreeOpen',
-                'Telescope find_files'
+                'Telescope frecency workspace=CWD'
             },
         },
     },
