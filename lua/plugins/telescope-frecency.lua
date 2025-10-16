@@ -7,6 +7,11 @@ return {
         dependencies = {
           'kkharji/sqlite.lua'
         },
+        opts = {
+          workspaces = {
+              CWD = "$CWD"
+          }
+        }
     },
 }
 
