@@ -23,7 +23,9 @@ api.nvim_create_autocmd({
     desc = "set foldmethod indent",
     group = "specialFolds",
     pattern = {
-      "yaml.ansible"
+      "yaml.ansible",
+      "yaml.gitlab",
+      "yaml"
     },
     command = "setlocal foldmethod=indent wrap linebreak"
 })
