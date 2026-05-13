@@ -9,8 +9,7 @@ api.nvim_create_autocmd({
 }, {
     group = "specialFiletypes",
     pattern = {
-      "*.yml",
-      "*.yaml"
+      "*.yml"
     },
     command = "set filetype=yaml.ansible",
     desc = "set filetype for ansible files"
