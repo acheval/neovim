@@ -68,10 +68,10 @@ return {
         keyset("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
 
         -- GoTo code navigation
-        keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
-        keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
-        keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-        keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
+        keyset("n", "cgd", "<Plug>(coc-definition)", {silent = true})
+        keyset("n", "cgy", "<Plug>(coc-type-definition)", {silent = true})
+        keyset("n", "cgi", "<Plug>(coc-implementation)", {silent = true})
+        keyset("n", "cgr", "<Plug>(coc-references)", {silent = true})
 
 
         -- Use K to show documentation in preview window
